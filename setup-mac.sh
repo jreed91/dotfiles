@@ -8,9 +8,15 @@ declare -r -a FILES_TO_SOURCE=(
   "zshrc"
 )
 
+echo "Install homebrew"
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew doctor
+
 echo "Install zsh"
-sudo apt install zsh
+brew install zsh
 zsh --version
+sudo sh -c "echo $(which zsh) >> /etc/shells" && chsh -s $(which zsh)
+Raw
 
 echo "Install ohmyzsh"
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
