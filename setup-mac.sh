@@ -12,6 +12,9 @@ echo "Install homebrew"
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew doctor
 
+echo "Install git"
+brew install git
+
 echo "Install zsh"
 brew install zsh
 zsh --version
