@@ -15,6 +15,9 @@ brew doctor
 echo "Install git"
 brew install git
 
+echo "Install nvm"
+brew install nvm
+
 echo "Install zsh"
 brew install zsh
 zsh --version
